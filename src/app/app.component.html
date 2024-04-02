@@ -1,6 +1,8 @@
-<input type="text" #cepInput placeholder="Digite seu CEP">
-<button (click)="buscador(cepInput.value)">Buscar</button>
-<div *ngIf="endereco">
+<div class="input-container">
+  <input type="text" #cepInput placeholder="Digite seu CEP">
+  <button (click)="buscador(cepInput.value)">Buscar</button>
+</div>
+<div *ngIf="endereco" class="resposta">
   <p>CEP: {{endereco.cep}}</p>
   <p>Estado: {{endereco.state}}</p>
   <p>Cidade: {{endereco.city}}</p>
